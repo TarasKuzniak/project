@@ -1,0 +1,19 @@
+a = float(input("введіть перше число: "))
+b = float(input("введіть друге число: "))
+operation = input("введіть операцію: ")
+
+result = None
+if operation == "+":
+    result = a + b
+elif operation == "-":
+    result = a - b
+elif operation == "*":
+    result = a * b
+elif operation == "/":
+    if b == 0:
+        print("операція не підтримується!")
+    else:
+        result = a / b
+
+if result is not None:
+    print("результат:", result)
