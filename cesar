@@ -1,0 +1,66 @@
+ua = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюяабвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
+eng = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+number = "01234567890123456789"
+key_1 = 1
+key_2 = -1
+language = str(input("оберіть мову (eng, ua, number): "))
+g = input("1. зашрифувати 2.розшифрувати: ")
+val = input("напишіть свою фразу: ")
+val = val.lower()
+vald = ""
+if g == "1":
+    if language == "eng":
+        for letters in val:
+            position = eng.find(letters)
+            new_position = position + key_1
+            if letters in eng:
+                vald = vald + eng[new_position]
+            else:
+                vald = vald + letters
+        print(vald)
+    elif language == "ua":
+        for letters in val:
+            position = ua.find(letters)
+            new_position = position + key_1
+            if letters in ua:
+                vald = vald + ua[new_position]
+            else:
+                vald = vald + letters
+        print(vald)
+    elif language == "number":
+        for letters in val:
+            position = number.find(letters)
+            new_position = position + key_1
+            if letters in number:
+                vald = vald + number[new_position]
+            else:
+                vald = vald + letters
+        print(vald)
+elif g == "2":
+    if language == "eng":
+        for letters in val:
+            position = eng.find(letters)
+            new_position = position + key_2
+            if letters in eng:
+                vald = vald + eng[new_position]
+            else:
+                vald = vald + letters
+        print(vald)
+    elif language == "ua":
+        for letters in val:
+            position = ua.find(letters)
+            new_position = position + key_2
+            if letters in ua:
+                vald = vald + ua[new_position]
+            else:
+                vald = vald + letters
+        print(vald)
+    elif language == "number":
+        for letters in val:
+            position = number.find(letters)
+            new_position = position + key_2
+            if letters in number:
+                vald = vald + number[new_position]
+            else:
+                vald = vald + letters
+        print(vald)
