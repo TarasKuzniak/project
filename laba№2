@@ -1,0 +1,16 @@
+b = input(str("обераіть тип роботи (1,2): "))
+if b == "1":
+    a = input(str("Введіть текст: ")).split()
+    a.sort()
+    z = sorted(set(a), key=lambda x: a.index(x))
+    letters = "".join(z)
+    for i in set(letters):
+        print("{}-{}".format(i, letters.count(i)))
+elif b == "2":
+    a = input(str("Введіть текст: ")).split()
+    a.sort()
+    z = sorted(set(a), key=lambda x: a.index(x))
+    for i in z:
+        number = len(i)
+        if number > 3:
+            print(i)
